@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name="users")
@@ -16,6 +17,9 @@ public class User {
     private String role;
     private String email;
     private Date passwordExpire;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Session session;
 
     public Long getId(){ return id; }
     public String getUuid(){ return uuid;}
