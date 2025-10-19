@@ -29,14 +29,8 @@ public class Config {
 
             public static class Client {
                 private String id;
-                private int level;
-                private String email;
 
                 public String getId(){return this.id; }
-                public int getLevel(){return this.level; }
-                public String getEmail(){return this.email;}
-
-                public void setEmail(String email){ this.email = email;}
                 public void setId(String id){this.id = id;}
             }
         }

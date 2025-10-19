@@ -4,7 +4,6 @@ import com.rps.entity.User;
 import com.rps.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -24,8 +23,9 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) throws IOException {
-        return userService.createUser(user);
+    public ResponseEntity<User> createUser(@RequestBody User user) throws IOException {
+        User createdUser = userService.createUser(user);
+        return ResponseEntity.ok(createdUser);
     }
 
     @GetMapping("/{id}")
