@@ -1,0 +1,9 @@
+Nodes:
+- PanelType: None
+  ControllerConfig:
+    userConnLimit: 1
+  Users:
+  - uuid: f1a2b3c4-d5e6-7890-abcd-ef1234567890
+  - uuid: aaaabbbb-cccc-1111-2222-ddddeeeeffff
+  - uuid: 5489aec2-4784-4a7d-aeec-4265c208bfaa
+  - uuid: f3299db9-f51d-452a-b56b-d95daa9ab0c5
